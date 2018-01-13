@@ -13,7 +13,7 @@ Works with JS promises. Returns [err res] Where err - a catched exception (rejec
     (:require [cljs-await.core :refer [await])
   
   (defn- ->promise [t]
-    (js/Promise. (fn [resolve reject] (set-timeout resolve, t, "hello from promise!"))))
+    (js/Promise. (fn [resolve reject] (js/setTimeout resolve, t, "hello from promise!"))))
     
   (go
     (let [[err res] (<! (await (->promise 2000)))]
