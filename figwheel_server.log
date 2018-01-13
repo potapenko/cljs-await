@@ -1,0 +1,368 @@
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cljs_await/core.cljs   line:11  column:15  ----[0m
+
+  [1mUse of undeclared Var cljs-await.core/chan[0m
+
+  [36m 7[0m  [36m(def clear-timeout js/clearTimeout)[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m(defn await[0m
+  [36m10[0m  [36m  [promise][0m
+  [33m11[0m  [1m  (let [port (chan)][0m
+  [0m  [0m  [33m              ^--- Use of undeclared Var cljs-await.core/chan[0m
+  [36m12[0m  [36m    (-> promise[0m
+  [36m13[0m  [36m        (.then (fn [res] (put! port [nil res]))[0m
+  [36m14[0m  [36m               (fn [err] (put! port [err nil])))[0m
+  [36m15[0m  [36m        (.catch (fn [err] (put! port [err nil]))))[0m
+  [36m16[0m  [36m    port))[0m
+
+[36m----  Compiler Warning : Please see src/cljs_await/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs_await/core.cljs   line:13  column:27  ----[0m
+
+  [1mUse of undeclared Var cljs-await.core/put![0m
+
+  [36m 9[0m  [36m(defn await[0m
+  [36m10[0m  [36m  [promise][0m
+  [36m11[0m  [36m  (let [port (chan)][0m
+  [36m12[0m  [36m    (-> promise[0m
+  [33m13[0m  [1m        (.then (fn [res] (put! port [nil res]))[0m
+  [0m  [0m  [33m                          ^--- Use of undeclared Var cljs-await.core/put![0m
+  [36m14[0m  [36m               (fn [err] (put! port [err nil])))[0m
+  [36m15[0m  [36m        (.catch (fn [err] (put! port [err nil]))))[0m
+  [36m16[0m  [36m    port))[0m
+  [36m17[0m  [36m[0m
+  [36m18[0m  [36m(defn await-cb [fnc & args][0m
+
+[36m----  Compiler Warning : Please see src/cljs_await/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs_await/core.cljs   line:14  column:27  ----[0m
+
+  [1mUse of undeclared Var cljs-await.core/put![0m
+
+  [36m10[0m  [36m  [promise][0m
+  [36m11[0m  [36m  (let [port (chan)][0m
+  [36m12[0m  [36m    (-> promise[0m
+  [36m13[0m  [36m        (.then (fn [res] (put! port [nil res]))[0m
+  [33m14[0m  [1m               (fn [err] (put! port [err nil])))[0m
+  [0m  [0m  [33m                          ^--- Use of undeclared Var cljs-await.core/put![0m
+  [36m15[0m  [36m        (.catch (fn [err] (put! port [err nil]))))[0m
+  [36m16[0m  [36m    port))[0m
+  [36m17[0m  [36m[0m
+  [36m18[0m  [36m(defn await-cb [fnc & args][0m
+  [36m19[0m  [36m  (let [port (chan)][0m
+
+[36m----  Compiler Warning : Please see src/cljs_await/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs_await/core.cljs   line:15  column:28  ----[0m
+
+  [1mUse of undeclared Var cljs-await.core/put![0m
+
+  [36m11[0m  [36m  (let [port (chan)][0m
+  [36m12[0m  [36m    (-> promise[0m
+  [36m13[0m  [36m        (.then (fn [res] (put! port [nil res]))[0m
+  [36m14[0m  [36m               (fn [err] (put! port [err nil])))[0m
+  [33m15[0m  [1m        (.catch (fn [err] (put! port [err nil]))))[0m
+  [0m  [0m  [33m                           ^--- Use of undeclared Var cljs-await.core/put![0m
+  [36m16[0m  [36m    port))[0m
+  [36m17[0m  [36m[0m
+  [36m18[0m  [36m(defn await-cb [fnc & args][0m
+  [36m19[0m  [36m  (let [port (chan)][0m
+  [36m20[0m  [36m    (apply fnc (concat args [(fn [& a] (put! port (or a [])))]))[0m
+
+[36m----  Compiler Warning : Please see src/cljs_await/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs_await/core.cljs   line:19  column:15  ----[0m
+
+  [1mUse of undeclared Var cljs-await.core/chan[0m
+
+  [36m15[0m  [36m        (.catch (fn [err] (put! port [err nil]))))[0m
+  [36m16[0m  [36m    port))[0m
+  [36m17[0m  [36m[0m
+  [36m18[0m  [36m(defn await-cb [fnc & args][0m
+  [33m19[0m  [1m  (let [port (chan)][0m
+  [0m  [0m  [33m              ^--- Use of undeclared Var cljs-await.core/chan[0m
+  [36m20[0m  [36m    (apply fnc (concat args [(fn [& a] (put! port (or a [])))]))[0m
+  [36m21[0m  [36m    port))[0m
+  [36m22[0m  [36m[0m
+  [36m23[0m  [36m(defn await-cb! [fnc & args][0m
+  [36m24[0m  [36m  (let [port (chan)][0m
+
+[36m----  Compiler Warning : Please see src/cljs_await/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs_await/core.cljs   line:20  column:41  ----[0m
+
+  [1mUse of undeclared Var cljs-await.core/put![0m
+
+  [36m16[0m  [36m    port))[0m
+  [36m17[0m  [36m[0m
+  [36m18[0m  [36m(defn await-cb [fnc & args][0m
+  [36m19[0m  [36m  (let [port (chan)][0m
+  [33m20[0m  [1m    (apply fnc (concat args [(fn [& a] (put! port (or a [])))]))[0m
+  [0m  [0m  [33m                                        ^--- Use of undeclared Var cljs-await.core/put![0m
+  [36m21[0m  [36m    port))[0m
+  [36m22[0m  [36m[0m
+  [36m23[0m  [36m(defn await-cb! [fnc & args][0m
+  [36m24[0m  [36m  (let [port (chan)][0m
+  [36m25[0m  [36m    (try[0m
+
+[36m----  Compiler Warning : Please see src/cljs_await/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs_await/core.cljs   line:24  column:15  ----[0m
+
+  [1mUse of undeclared Var cljs-await.core/chan[0m
+
+  [36m20[0m  [36m    (apply fnc (concat args [(fn [& a] (put! port (or a [])))]))[0m
+  [36m21[0m  [36m    port))[0m
+  [36m22[0m  [36m[0m
+  [36m23[0m  [36m(defn await-cb! [fnc & args][0m
+  [33m24[0m  [1m  (let [port (chan)][0m
+  [0m  [0m  [33m              ^--- Use of undeclared Var cljs-await.core/chan[0m
+  [36m25[0m  [36m    (try[0m
+  [36m26[0m  [36m      (apply fnc (concat args [(fn [& a] (put! port (or a [])))]))[0m
+  [36m27[0m  [36m      (catch js/Error e (put! port [])))[0m
+  [36m28[0m  [36m    port))[0m
+
+[36m----  Compiler Warning : Please see src/cljs_await/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs_await/core.cljs   line:27  column:26  ----[0m
+
+  [1mUse of undeclared Var cljs-await.core/put![0m
+
+  [36m23[0m  [36m(defn await-cb! [fnc & args][0m
+  [36m24[0m  [36m  (let [port (chan)][0m
+  [36m25[0m  [36m    (try[0m
+  [36m26[0m  [36m      (apply fnc (concat args [(fn [& a] (put! port (or a [])))]))[0m
+  [33m27[0m  [1m      (catch js/Error e (put! port [])))[0m
+  [0m  [0m  [33m                         ^--- Use of undeclared Var cljs-await.core/put![0m
+  [36m28[0m  [36m    port))[0m
+
+[36m----  Compiler Warning : Please see src/cljs_await/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs_await/core.cljs   line:26  column:43  ----[0m
+
+  [1mUse of undeclared Var cljs-await.core/put![0m
+
+  [36m23[0m  [36m(defn await-cb! [fnc & args][0m
+  [36m24[0m  [36m  (let [port (chan)][0m
+  [36m25[0m  [36m    (try[0m
+  [33m26[0m  [1m      (apply fnc (concat args [(fn [& a] (put! port (or a [])))]))[0m
+  [0m  [0m  [33m                                          ^--- Use of undeclared Var cljs-await.core/put![0m
+  [36m27[0m  [36m      (catch js/Error e (put! port [])))[0m
+  [36m28[0m  [36m    port))[0m
+
+[36m----  Compiler Warning : Please see src/cljs_await/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.633 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.353 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.347 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.346 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.339 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.376 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.34 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.341 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.337 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.338 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.328 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.356 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.331 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.325 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cljs_await/core.cljs   line:34  column:3  ----[0m
+
+  [1mUse of undeclared Var cljs-await.core/k[0m
+
+  [36m30[0m  [36m  err - an exception (if it happens)[0m
+  [36m31[0m  [36m  res - the result of the work of the promise (nil - if there was an exception)"[0m
+  [36m32[0m  [36m[0m
+  [36m33[0m  [36m  [fnc & args][0m
+  [33m34[0m  [1m  k[0m
+  [0m  [0m  [33m  ^--- Use of undeclared Var cljs-await.core/k[0m
+  [36m35[0m  [36m  (let [port (chan)][0m
+  [36m36[0m  [36m    (try[0m
+  [36m37[0m  [36m      (apply fnc (concat args [(fn [a] (put! port [nil a]))]))[0m
+  [36m38[0m  [36m      (catch js/Error e (put! port [e nil])))[0m
+  [36m39[0m  [36m    port))[0m
+
+[36m----  Compiler Warning : Please see src/cljs_await/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.363 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.322 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.331 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.358 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.325 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.327 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.335 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cljs_await/core.cljs   line:41  column:3  ----[0m
+
+  [1mUse of undeclared Var cljs-await.core/Promice[0m
+
+  [36m37[0m  [36m    port))[0m
+  [36m38[0m  [36m[0m
+  [36m39[0m  [36m[0m
+  [36m40[0m  [36m(defn- ->promice [t][0m
+  [33m41[0m  [1m  (Promice. (fn [resolve reject] (set-timeout resolve, 100, "hello world"))))[0m
+  [0m  [0m  [33m  ^--- Use of undeclared Var cljs-await.core/Promice[0m
+  [36m42[0m  [36m[0m
+  [36m43[0m  [36m[0m
+  [36m44[0m  [36m(comment[0m
+
+[36m----  Compiler Warning : Please see src/cljs_await/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs_await/core.cljs   line:41  column:3  ----[0m
+
+  [1mUse of undeclared Var cljs-await.core/Promice[0m
+
+  [36m37[0m  [36m    port))[0m
+  [36m38[0m  [36m[0m
+  [36m39[0m  [36m[0m
+  [36m40[0m  [36m(defn- ->promice [t][0m
+  [33m41[0m  [1m  (Promice. (fn [resolve reject] (set-timeout resolve, 100, "hello world"))))[0m
+  [0m  [0m  [33m  ^--- Use of undeclared Var cljs-await.core/Promice[0m
+  [36m42[0m  [36m[0m
+  [36m43[0m  [36m[0m
+  [36m44[0m  [36m(comment[0m
+
+[36m----  Compiler Warning : Please see src/cljs_await/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.357 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cljs_await/core.cljs   line:41  column:3  ----[0m
+
+  [1mUse of undeclared Var cljs-await.core/Promice[0m
+
+  [36m37[0m  [36m    port))[0m
+  [36m38[0m  [36m[0m
+  [36m39[0m  [36m[0m
+  [36m40[0m  [36m(defn- ->promice [t][0m
+  [33m41[0m  [1m  (Promice. (fn [resolve reject] (set-timeout resolve, 100, "hello world"))))[0m
+  [0m  [0m  [33m  ^--- Use of undeclared Var cljs-await.core/Promice[0m
+  [36m42[0m  [36m[0m
+  [36m43[0m  [36m(comment[0m
+
+[36m----  Compiler Warning : Please see src/cljs_await/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs_await/core.cljs   line:41  column:3  ----[0m
+
+  [1mUse of undeclared Var cljs-await.core/Promice[0m
+
+  [36m37[0m  [36m    port))[0m
+  [36m38[0m  [36m[0m
+  [36m39[0m  [36m[0m
+  [36m40[0m  [36m(defn- ->promice [t][0m
+  [33m41[0m  [1m  (Promice. (fn [resolve reject] (set-timeout resolve, 100, "hello world"))))[0m
+  [0m  [0m  [33m  ^--- Use of undeclared Var cljs-await.core/Promice[0m
+  [36m42[0m  [36m[0m
+  [36m43[0m  [36m(comment[0m
+
+[36m----  Compiler Warning : Please see src/cljs_await/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.354 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cljs_await/core.cljs   line:41  column:3  ----[0m
+
+  [1mUse of undeclared Var cljs-await.core/Promice[0m
+
+  [36m37[0m  [36m    port))[0m
+  [36m38[0m  [36m[0m
+  [36m39[0m  [36m[0m
+  [36m40[0m  [36m(defn- ->promice [t][0m
+  [33m41[0m  [1m  (Promice. (fn [resolve reject] (set-timeout resolve, 100, "hello world"))))[0m
+  [0m  [0m  [33m  ^--- Use of undeclared Var cljs-await.core/Promice[0m
+  [36m42[0m  [36m[0m
+  [36m43[0m  [36m(comment[0m
+  [36m44[0m  [36m[0m
+  [36m45[0m  [36m  (go[0m
+
+[36m----  Compiler Warning : Please see src/cljs_await/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs_await/core.cljs   line:41  column:3  ----[0m
+
+  [1mUse of undeclared Var cljs-await.core/Promice[0m
+
+  [36m37[0m  [36m    port))[0m
+  [36m38[0m  [36m[0m
+  [36m39[0m  [36m[0m
+  [36m40[0m  [36m(defn- ->promice [t][0m
+  [33m41[0m  [1m  (Promice. (fn [resolve reject] (set-timeout resolve, 100, "hello world"))))[0m
+  [0m  [0m  [33m  ^--- Use of undeclared Var cljs-await.core/Promice[0m
+  [36m42[0m  [36m[0m
+  [36m43[0m  [36m(comment[0m
+  [36m44[0m  [36m[0m
+  [36m45[0m  [36m  (go[0m
+
+[36m----  Compiler Warning : Please see src/cljs_await/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.358 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.312 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.318 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.324 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.316 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.313 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.315 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.327 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.314 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.322 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.312 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.357 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.32 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.332 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
+[0mCompiling "resources/public/js/compiled/cljs_await.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/cljs_await.js" in 0.327 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_await/core.js
