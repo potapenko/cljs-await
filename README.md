@@ -10,7 +10,9 @@ Works with JS promises. Returns [err res] Where err - a catched exception (rejec
 
 ```
   (ns my-ns
-    (:require [cljs-await.core :refer [await])
+    (:require [cljs-await.core :refer [await-cb]
+              [cljs.core.async :as async :refer [<! >! put! chan timeout]])
+    (:require-macros [cljs.core.async.macros :refer [go go-loop]]))
   
   (defn- ->promise [t]
     (js/Promise. (fn [resolve reject] (js/setTimeout resolve, t, "hello from promise!"))))
@@ -26,7 +28,9 @@ Works with functions, the last argument is the function callback. Returns [err r
 
 ```
   (ns my-ns
-    (:require [cljs-await.core :refer [await-cb])
+    (:require [cljs-await.core :refer [await-cb]
+              [cljs.core.async :as async :refer [<! >! put! chan timeout]])
+    (:require-macros [cljs.core.async.macros :refer [go go-loop]]))
   
   (defn- ->callback []
     (fn [cb] (cb "hello from callback!")))
