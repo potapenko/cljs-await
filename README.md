@@ -1,6 +1,6 @@
 # cljs-await
 
-`[cljs-await "1.0.0-SNAPSHOT"]`
+`[cljs-await "1.0.1-SNAPSHOT"]`
 
 A very simple ClojureScript library for working with promises and callbacks with core.async.
 
