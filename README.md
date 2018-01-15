@@ -6,7 +6,7 @@ A very simple ClojureScript library for working with promises and callbacks via 
 
 ## await
 
-Works with JS promises. Returns [err res] where err - a catched exception (reject) and res - the result of the promise work (resolve).
+Works with JS promises. Returns [err res] where err - a caught exception (reject) and res - the result of the promise work (resolve).
 
 ```
   (ns my-ns
