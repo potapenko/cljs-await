@@ -3,7 +3,7 @@
   <groupId>cljs-await</groupId>
   <artifactId>cljs-await</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>cljs-await</name>
   <description>FIXME: write this!</description>
   <url>http://example.com/FIXME</url>
@@ -16,7 +16,7 @@
   <scm>
     <connection>scm:git:git://github.com/potapenko/cljs-await.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/potapenko/cljs-await.git</developerConnection>
-    <tag>HEAD
+    <tag>bc5d1209e6c569f1ea416c8fb3383be8f7f6fa09
 </tag>
     <url>https://github.com/potapenko/cljs-await</url>
   </scm>
