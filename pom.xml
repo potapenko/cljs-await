@@ -3,10 +3,10 @@
   <groupId>cljs-await</groupId>
   <artifactId>cljs-await</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.1</version>
   <name>cljs-await</name>
   <description>FIXME: write this!</description>
-  <url>http://example.com/FIXME</url>
+  <url>https://github.com/potapenko/cljs-await</url>
   <licenses>
     <license>
       <name>Eclipse Public License</name>
@@ -16,7 +16,7 @@
   <scm>
     <connection>scm:git:git://github.com/potapenko/cljs-await.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/potapenko/cljs-await.git</developerConnection>
-    <tag>bc5d1209e6c569f1ea416c8fb3383be8f7f6fa09
+    <tag>67a56620327c9971aaf43c6efd56863a09a45c47
 </tag>
     <url>https://github.com/potapenko/cljs-await</url>
   </scm>
