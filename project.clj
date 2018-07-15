@@ -1,4 +1,4 @@
-(defproject cljs-await "1.0.1"
+(defproject cljs-await "1.0.2"
   :description "FIXME: write this!"
   :url "https://github.com/potapenko/cljs-await"
   :license {:name "Eclipse Public License"

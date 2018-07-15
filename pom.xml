@@ -16,7 +16,7 @@
   <scm>
     <connection>scm:git:git://github.com/potapenko/cljs-await.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/potapenko/cljs-await.git</developerConnection>
-    <tag>67a56620327c9971aaf43c6efd56863a09a45c47
+    <tag>6b03f41c2af0b168bd2b4e6cea1ac600166e78b5
 </tag>
     <url>https://github.com/potapenko/cljs-await</url>
   </scm>
