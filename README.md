@@ -9,14 +9,14 @@ A very simple ClojureScript library for working with promises and callbacks via 
 Works with JS promises. Returns [err res] where err - a caught exception (reject) and res - the result of the promise work (resolve).
 
 ```
-  (ns my-ns
-    (:require [cljs-await.core :refer [await-cb]
-              [cljs.core.async :as async :refer [<! >! put! chan timeout]])
-    (:require-macros [cljs.core.async.macros :refer [go go-loop]]))
-  
+(ns my-ns
+  (:require [cljs-await.core :refer [await-cb]]
+             [cljs.core.async :as async :refer [<! >! put! chan timeout]])
+            (:require-macros [cljs.core.async.macros :refer [go go-loop]]))
+
   (defn- ->promise [t]
     (js/Promise. (fn [resolve reject] (js/setTimeout resolve, t, "hello from promise!"))))
-    
+
   (go
     (let [[err res] (<! (await (->promise 2000)))]
       (println res)))
@@ -28,7 +28,7 @@ Works with functions, the last argument is the function callback. Returns [err r
 
 ```
   (ns my-ns
-    (:require [cljs-await.core :refer [await-cb]
+    (:require [cljs-await.core :refer [await-cb]]
               [cljs.core.async :as async :refer [<! >! put! chan timeout]])
     (:require-macros [cljs.core.async.macros :refer [go go-loop]]))
   
