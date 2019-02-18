@@ -10,7 +10,7 @@ Works with JS promises. Returns [err res] where err - a caught exception (reject
 
 ```
 (ns my-ns
-  (:require [cljs-await.core :refer [await-cb]]
+  (:require [cljs-await.core :refer [await]]
              [cljs.core.async :as async :refer [<! >! put! chan timeout]])
             (:require-macros [cljs.core.async.macros :refer [go go-loop]]))
 
